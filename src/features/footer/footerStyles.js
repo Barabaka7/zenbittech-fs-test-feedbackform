@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
 export const FooterWrapper = styled.div`
   box-sizing: border-box;
@@ -20,4 +19,9 @@ export const Nav = styled.ul`
 export const NavElement = styled.li`
   display: inline;
   margin: 0 15px;
+`;
+
+export const NavImage = styled.img`
+  height: 20px;
+  width: auto;
 `;

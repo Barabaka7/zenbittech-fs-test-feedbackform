@@ -79,9 +79,14 @@ export const Button = styled.button`
 
   &:hover {
     background: #0320fc;
+    cursor: pointer;
   }
 
   &:disabled {
     background: #808080;
   }
+`;
+
+export const Span = styled.span`
+  color: "red";
 `;

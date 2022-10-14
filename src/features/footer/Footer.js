@@ -1,13 +1,21 @@
-import { FooterWrapper, Nav, NavElement } from "./footerStyles";
+import { FooterWrapper, Nav, NavElement, NavImage } from "./footerStyles";
 
 export const Footer = () => {
   return (
     <FooterWrapper>
       <Nav>
-        <NavElement>😆</NavElement>
-        <NavElement>Twitter</NavElement>
-        <NavElement>FB</NavElement>
-        <NavElement>Pinterest</NavElement>
+        <NavElement>
+          <NavImage src="/img/linkedin.png" />
+        </NavElement>
+        <NavElement>
+          <NavImage src="/img/twitter.png" />
+        </NavElement>
+        <NavElement>
+          <NavImage src="/img/fb.png" />
+        </NavElement>
+        <NavElement>
+          <NavImage src="/img/pinterest.png" />
+        </NavElement>
       </Nav>
     </FooterWrapper>
   );
