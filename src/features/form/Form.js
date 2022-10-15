@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setFeedback } from "./formSlice";
+import axios from "axios";
 
 export const Form = () => {
   const [formData, setFormData] = useState({ emailInputStyle: "" });
@@ -49,7 +50,7 @@ export const Form = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newFeedback = {
       name: formData.name,
@@ -60,9 +61,15 @@ export const Form = () => {
 
     alert("Thanks for your feedback!");
 
+    await postingFeedback(newFeedback);
+
     setFormData(() => {
       return { name: "", email: "", message: "" };
     });
+  };
+
+  const postingFeedback = async (feedback) => {
+    await axios.post("http://localhost:3001/feedbacks", feedback);
   };
 
   return (
